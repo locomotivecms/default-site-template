@@ -1,19 +1,16 @@
 name: Songs
-highlighted_field_name: name
+highlighted_field_name: title
 order_by: manually
 slug: songs
 fields:
-- name:
-    label: Name
+- title:
     kind: string
     required: true
-    hint: Name of your asset
+    hint: Title of your song
 - cover:
     label: Cover
     kind: file
     required: true
-- title:
-    kind: string
 - short_description:
     kind: text
 - audio_url:
