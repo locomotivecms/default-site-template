@@ -1,0 +1,23 @@
+name: Songs
+highlighted_field_name: name
+order_by: manually
+slug: songs
+fields:
+- name:
+    label: Name
+    kind: string
+    required: true
+    hint: Name of your asset
+- cover:
+    label: Cover
+    kind: file
+    required: true
+- title:
+    kind: string
+- short_description:
+    kind: text
+- audio_url:
+    kind: string
+    hint: Url to a service like Blip for instance
+- duration:
+    hint: "format like: mm:ss"

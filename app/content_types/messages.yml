@@ -1,0 +1,14 @@
+name: Messages
+description: Messages posted by new potential customers
+slug: messages
+highlighted_field_name: name
+api_enabled: true
+order_by: date
+fields:
+- name:
+    hint: Full name
+- email:
+    hint: Email
+- message:
+    hint: Customer message
+    kind: text

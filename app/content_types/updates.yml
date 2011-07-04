@@ -1,0 +1,15 @@
+name: Updates
+description: List of updates
+slug: updates
+order_by: created_at
+highlighted_field_name: title
+api_enabled: false
+fields:
+- title:
+    hint: Not displayed in the website
+- text:
+    kind: text
+    hint: Text displayed in the home page
+- date:
+    kind: date
+    hint: Date of the update

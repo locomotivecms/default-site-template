@@ -10,36 +10,16 @@
 
   <div class="unit size1of2">
     <ul class="songs">
-      {% for song in asset_collections.songs limit: 4 offset: 0 %}
-      <li>
-        <h3>{{ song.title }}</h3>
-        <div class="cover">{{ song.url | image_tag }}</div>
-        <div class="info">
-          {{ song.short_description }}
-          <p class="listen">
-            <a href="{{ song.audio_url }}">&rarr; Listen ({{ song.duration }} min)</a>
-          </p>
-        </div>
-        <div class="clear"></div>
-      </li>
+      {% for song in contents.songs limit: 4 offset: 0 %}
+        {% include 'song' with song %}
       {% endfor %}
     </ul>
   </div>
 
   <div class="unit size1of2">
     <ul class="songs">
-      {% for song in asset_collections.songs offset: 4 %}
-      <li>
-        <h3>{{ song.title }}</h3>
-        <div class="cover">{{ song.url | image_tag }}</div>
-        <div class="info">
-          {{ song.short_description }}
-          <p class="listen">
-            <a href="{{ song.audio_url }}">&rarr; Listen ({{ song.duration }} min)</a>
-          </p>
-        </div>
-        <div class="clear"></div>
-      </li>
+      {% for song in contents.songs offset: 4 %}
+        {% include 'song' with song %}
       {% endfor %}
     </ul>
   </div>
