@@ -2,17 +2,16 @@ name: Events
 description: List of upcoming events
 slug: events
 order_by: created_at
-highlighted_field_name: place
-api_enabled: false
+label_field_name: place
 fields:
 - place:
     hint: Name of the place
 - date:
-    kind: date
+    type: date
     hint: Date of the event
 - city:
-    kind: string
+    type: string
     label: City of the event
 - state:
-    kind: string
+    type: string
     label: State of the event
