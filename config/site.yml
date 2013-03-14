@@ -1,21 +1,16 @@
-site:
-  name: Sample website
+# TODO: explain it
+name: demo_effe
 
-  locales: [en]
+# TODO: explain it
+# subdomain: sample
 
-  seo_title: A simple LocomotiveCMS website
-  meta_keywords: some meta keywords
-  meta_description: some meta description
+# TODO: explain it
+# domains: [www.example.com, example.com]
 
-  pages:
-  - index:
-      title: Home page
-  - about_us:
-      title: About us
-  - music:
-  - store:
-      redirect_url: http://www.apple.com/fr/itunes/
-  - contact:
-      title: Contact us
-  - "404":
-      title: Page not found
+# TODO: explain it
+locales: [en]
+
+# TODO: explain it
+seo_title: demo_effe
+meta_keywords: "some meta keywords"
+meta_description: "some meta description"
