@@ -1,0 +1,48 @@
+name: Comments
+
+slug: comments
+
+description: Comments refering to a blog post
+
+# Default field (e.g title)
+label_field_name: name
+
+# Order of entries
+order_by: created_at # default: manually, also available: created_at or any field slug
+
+public_submission_enabled: true
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+    localized: false
+
+- email:
+    label: Email
+    type: string
+    required: false
+    localized: false
+
+- url:
+    label: Site
+    type: string
+    required: false
+    localized: false
+
+- description:
+    label: Description
+    type: text
+    required: false
+    localized: false
+
+- post:
+    label: Post
+    type: belongs_to
+    class_name: posts
+
+- published:
+    label: Published
+    type: boolean
+    required: true

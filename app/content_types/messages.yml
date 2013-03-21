@@ -1,0 +1,18 @@
+name: Messages
+description: Messages submitted via the website
+slug: messages
+label_field_name: name
+fields:
+- name:
+    label: Name
+    type: string
+    required: true
+- email:
+    label: Email
+    type: string
+    required: true
+- description:
+    label: Message
+    type: text
+    required: true
+public_submission_enabled: true

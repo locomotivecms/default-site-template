@@ -1,0 +1,49 @@
+- "Helvetica":
+    description: "<p>Ut ligula sapien, vulputate nec vulputate eget, semper ac augue. Sed varius ante leo, vel tristique libero. Aenean eros felis, auctor a congue ut, pellentesque vel elit. Vivamus imperdiet ultricies diam sit amet euismod. Duis nec purus quis neque commodo porta sit amet vitae mi. Curabitur vestibulum ante convallis enim fringilla posuere. In ac erat ut magna cursus faucibus.</p>"
+    items_list: "<ul><li>This is the first item</li><li>This is the second item</li><li>This is the third item</li><li>This is the fourth item</li></ul>"
+    photo1: /samples/projects/slide1.jpg
+    photo2: /samples/projects/slide2.jpg
+    data_tags: "Web Design,Print Design"
+    catcher: "Kinda sweet huh?"
+
+- "Typography":
+    description: "<p>Ut ligula sapien, vulputate nec vulputate eget, semper ac augue. Sed varius ante leo, vel tristique libero. Aenean eros felis, auctor a congue ut, pellentesque vel elit. Vivamus imperdiet ultricies diam sit amet euismod. Duis nec purus quis neque commodo porta sit amet vitae mi. Curabitur vestibulum ante convallis enim fringilla posuere. In ac erat ut magna cursus faucibus.</p>"
+    items_list: "<ul><li>This is the first item</li><li>This is the second item</li><li>This is the third item</li><li>This is the fourth item</li></ul>"
+    photo1: /samples/projects/image(2).jpg
+    data_tags: "Logo Design"
+    catcher: "Lorem ipsum here."
+
+- "Ideas":
+    description: "Esse autem est tempora nihil. Ea neque nostrum et quis. Voluptas ab dolorum aspernatur dignissimos nulla nam sint soluta. Eligendi rerum corporis tenetur aliquam et omnis nobis."
+    items_list: "Deleniti a vel cumque sit. Odit harum necessitatibus dolor quia magni. Omnis blanditiis debitis mollitia hic."
+    photo1: /samples/projects/image(3).jpg
+    data_tags: "Web Design,Logo Design,Print Design"
+    catcher: A light bulb!
+
+- "Moo Cards":
+    description: "Voluptas unde quis sit sit ut sunt. Qui iure unde sunt vel non. Repellendus laboriosam dolor enim consectetur eos aut ea eius. Quod perspiciatis nostrum et. Possimus doloremque deleniti laborum est voluptatum quibusdam."
+    items_list: "Consequuntur voluptas enim qui aspernatur at. Omnis error ipsum ducimus odio perspiciatis adipisci. Aut eligendi quia et. Saepe magni eum id nostrum quas recusandae earum. Eveniet dolorem id nihil optio ut ex veritatis."
+    photo1: /samples/projects/image(1).jpg
+    data_tags: "Web Design"
+    catcher: Gotta lovem'.
+
+- "Rockable press":
+    description: "Esse autem est tempora nihil. Ea neque nostrum et quis. Voluptas ab dolorum aspernatur dignissimos nulla nam sint soluta. Eligendi rerum corporis tenetur aliquam et omnis nobis."
+    items_list: "Deleniti a vel cumque sit. Odit harum necessitatibus dolor quia magni. Omnis blanditiis debitis mollitia hic."
+    photo1: /samples/projects/image(4).jpg
+    data_tags: "Print Design"
+    catcher: Best books around.
+
+- "Moo Minicards":
+    description: "Esse autem est tempora nihil. Ea neque nostrum et quis. Voluptas ab dolorum aspernatur dignissimos nulla nam sint soluta. Eligendi rerum corporis tenetur aliquam et omnis nobis."
+    items_list: "Deleniti a vel cumque sit. Odit harum necessitatibus dolor quia magni. Omnis blanditiis debitis mollitia hic."
+    photo1: /samples/projects/image(5).jpg
+    data_tags: "Print Design"
+    catcher: So small and cool.
+
+- "Just say it!":
+    description: "Esse autem est tempora nihil. Ea neque nostrum et quis. Voluptas ab dolorum aspernatur dignissimos nulla nam sint soluta. Eligendi rerum corporis tenetur aliquam et omnis nobis."
+    items_list: "Deleniti a vel cumque sit. Odit harum necessitatibus dolor quia magni. Omnis blanditiis debitis mollitia hic."
+    photo1: /samples/projects/image(6).jpg
+    data_tags: "Web Design"
+    catcher: Printed.

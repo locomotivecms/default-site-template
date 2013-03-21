@@ -1,0 +1,68 @@
+---
+title: "Blog post template"
+templatized: true
+content_type: posts
+editable_elements:
+  Title: Blog
+---
+{% extends index %}
+{% block 'main' %}
+#blog
+  .blog-item-single
+    %h3 {{ post.title }}
+    .blog-item-single-info
+      .user admin
+      .comments 6 comments
+      .tags psd news blog post
+    .blog-item-single-content
+      %a.single_image{:href => "{{ post.photo['url'] }}"}
+        %img{:alt => "blog1", :height => "280", :src => "{{ post.photo['url'] | resize: '720x280#'}}", :width => "720"}/
+      {{ post.description }}
+    .social-blog-buttons
+      %a.twitter-share-button{"data-count" => "horizontal", "data-via" => "92_Five", :href => "http://twitter.com/share"} Tweet
+      %script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
+      %iframe{:frameborder => "0", :scrolling => "no", :src => "http://www.facebook.com/plugins/like.php?app_id=108550772584353&href=http%3A%2F%2Fwww.92five.net&send=false&layout=button_count&width=450&show_faces=true&action=like&colorscheme=light&font&height=21", :style => "border:none; overflow:hidden; width:450px; height:21px;"}
+    .comments-block
+      %h3.comments-title Comments ({{ post.comments.size }})
+      {% for comment in post.comments %}
+      .spacer
+      .comment
+        %img.avatar{:alt => "", :height => "35", :src => "http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm", :width => "50"}/
+        .comment-info
+          %a.post-author {{ comment.name }}
+          %p January 21, 2011 (todo created_at)
+        .comment-body
+          %p {{ comment.description | newline_to_br }}
+          %a.reply{:href => "#"} Reply
+      {% endfor %}
+      .spacer
+    .response
+      %h3 Leave a Comment
+      %h6.required-comment * required
+      %form{:action => '{{contents.comments.public_submission_url}}', class: "form", id: "comment-form"}
+        {% csrf_param %}
+        %input{type: "hidden", name: "content[post_id]", value:"{{ post._id }}"}/
+        {% if message.errors %}
+        %p The following errors occured:
+        %ul
+          {% for error in message.errors %}
+          %li
+            {{error[0] | capitalize}} -  {{error[1]}}
+          {% endfor %}
+        {% endif %}
+        .input-block
+          %h6.short-label Name*
+          %input#name.short-field{:name => "content[name]", :type => "text", :value => ""}/
+        .input-block
+          %h6.short-label Email*
+          %input#email.short-field{:name => "content[email]", :type => "text", :value => ""}/
+        .input-block-long
+          %h6.short-label Web
+          %input#url.long-field{:name => "content[url]", :placeholder => "http://", :type => "text", :value => ""}/
+        .textarea-block
+          %h6 Comments*
+          %textarea#comment{:cols => "70", :name => "content[description]", :rows => "10"}
+        .clear
+        %input#comment-button{:name => "submit", :type => "submit", :value => "Submit"}/
+      .spacer
+{% endblock %}

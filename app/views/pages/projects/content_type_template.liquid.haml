@@ -1,0 +1,59 @@
+---
+title: "Project template"
+templatized: true
+content_type: projects
+editable_elements:
+  Title: This is just a sample project of ours, you can have as many as you want!
+---
+{% extends index %}
+{% block 'main' %}
+/ This is the START of the NIVO slider
+.slider-wrapper.theme-effe
+  #slider.nivoSlider
+    %img{:alt => "", :src => "{{ project.photo1['url'] }}", :title => "#img1"}/
+    {% if project.photo2 %}
+    %img{:alt => "", :src => "{{ project.photo2['url'] }}", :title => "#img2"}/
+    {% endif %}
+  #slider-shadow
+/ END of NIVO Slider
+/ This is the START of the project
+.project
+  #description
+    %h3 {{ project.title }}
+    {{ project.description }}
+  #work
+    {{ project.items_list }}
+/ END of project
+/ This is the START of the gallery
+.spacer
+.project-summary
+  .one-third
+    %a.single_image{:href => "{{ 'sample-project/large/project1.jpg' | theme_image_url }}", :rel => "gallery1"}
+      %img{:alt => "sample-project1", :height => "132", :src => "{{ 'sample-project/thumbs/project1.jpg' | theme_image_url }}", :width => "220"}/
+    %a.single_image{:href => "{{ 'sample-project/large/project2.jpg' | theme_image_url }}", :rel => "gallery1"}
+    %a.single_image{:href => "{{ 'sample-project/large/project3.jpg' | theme_image_url }}", :rel => "gallery1"}
+    %h6 24.5.2009
+    %p
+      Moo cards done.
+      %a.readmore{:href => "#"} read more →
+  .one-third
+    %a.single_image{:href => "{{ 'sample-project/large/project3.jpg' | theme_image_url }}", :rel => "gallery2"}
+      %img{:alt => "sample-project3", :height => "132", :src => "{{ 'sample-project/thumbs/project3.jpg' | theme_image_url }}", :width => "220"}/
+    %a.single_image{:href => "{{ 'sample-project/large/project2.jpg' | theme_image_url }}", :rel => "gallery2"}
+    %a.single_image{:href => "{{ 'sample-project/large/project1.jpg' | theme_image_url }}", :rel => "gallery2"}
+    %h6 1.6.2009
+    %p
+      Like printing?
+      %a.readmore{:href => "#"} read more →
+  .one-third-last
+    %a.single_image{:href => "{{ 'sample-project/large/project2.jpg' | theme_image_url }}", :rel => "gallery3"}
+      %img{:alt => "sample-project2", :height => "132", :src => "{{ 'sample-project/thumbs/project2.jpg' | theme_image_url }}", :width => "220"}/
+    %a.single_image{:href => "{{ 'sample-project/large/project3.jpg' | theme_image_url }}", :rel => "gallery3"}
+    %a.single_image{:href => "{{ 'sample-project/large/project1.jpg' | theme_image_url }}", :rel => "gallery3"}
+    %h6 22.7.2009
+    %p
+      Sweeeeeet.
+      %a.readmore{:href => "#"} read more →
+/ END of gallery
+.spacer
+{% endblock %}

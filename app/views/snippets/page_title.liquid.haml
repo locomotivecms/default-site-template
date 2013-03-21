@@ -1,0 +1,5 @@
+%h4 {% editable_short_text 'Title' %}Oups! We forgot to set a title here !{% endeditable_short_text %}
+%h6
+  %a{:href => "/"} Home
+  {% unless page.full_path == "index" %}→ {{ page.title }}{% endunless %}
+

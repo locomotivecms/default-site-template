@@ -1,0 +1,43 @@
+# Public name of this content type
+name: Posts
+
+slug: posts
+
+description: Blog posts
+
+label_field_name: title
+
+order_by: created_at
+order_direction: desc
+
+fields: 
+- title:
+    label: Title
+    type: string
+    required: true
+    localized: false
+
+- photo:
+    label: Photo
+    type: file
+    required: false
+    localized: false
+
+- short_description:
+    label: Short description
+    type: string
+    required: false
+    localized: false
+
+- description:
+    label: Description
+    type: text
+    required: false
+    localized: false
+    text_formatting: html
+
+- comments:
+    label: Comments
+    type: has_many
+    class_name: comments
+    inverse_of: post

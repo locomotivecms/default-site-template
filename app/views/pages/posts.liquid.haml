@@ -1,0 +1,33 @@
+---
+title: Blog
+published: true
+position: 4
+editable_elements:
+  Title: Blog
+---
+{% extends index %}
+{% block 'main' %}
+#blog
+  {% for post in contents.posts %}
+  .blog-item
+    %a{:href => "posts/{{ post._permalink }}"}
+      %img.single_image{:alt => "blog1", :height => "180", :src => "{{ post.photo['url'] | resize: '280x180#' }}", :width => "280"}/
+    .blog-item-info
+      .user admin
+      .comments 6 comments
+      .tags psd news blog post
+    .blog-item-content
+      %a{:href => "blog-single.html"}
+      %h5 {{ post.title }}
+      %p {{ post.short_description }}
+      %a.readmore{:href => "posts/{{ post._permalink }}"} read more →
+
+      %br/
+  {% endfor %}
+  #pagination
+    %a.active{:href => "#"} 1
+    %a{:href => "#"} 2
+    %a{:href => "#"} 3
+    %a{:href => "#"} ...
+    %a{:href => "#"} →
+{% endblock %}

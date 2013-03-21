@@ -1,0 +1,49 @@
+name: Projects
+slug: projects
+description: List of the projects in the portfolio
+label_field_name: title
+order_by: manually
+fields: 
+- title:
+    label: Title
+    type: string
+    required: true
+    localized: false
+
+- description:
+    label: Description
+    type: text
+    required: false
+    localized: false
+    text_formatting: html
+
+- items_list:
+    label: Items list
+    type: text
+    required: false
+    localized: false
+    text_formatting: html
+
+- photo1:
+    label: Photo1
+    type: file
+    required: false
+    localized: false
+
+- photo2:
+    label: Photo2
+    type: file
+    required: false
+    localized: false
+
+- data_tags:
+    label: Data tags (comma separated)
+    type: string
+    hint: "Example : 'Logo Design,Print Design'"
+    required: true
+
+- catcher:
+    label: catcher
+    type: string
+    hint: Short presentation in project list
+    required: true

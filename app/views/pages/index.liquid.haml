@@ -1,0 +1,140 @@
+---
+title: Home page
+published: true
+editable_elements:
+  Title: We make a bunch of cool stuff, have a look around!
+---
+<!doctype html>
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{:name => "description", :value => "{{ site.meta_description }}"}/
+    %title {{ site.name }}
+    %link{:href => "favicon.ico", :rel => "shortcut icon"}/
+    
+    / Load CSS
+    {{ 'styles' | stylesheet_tag }}
+
+    / Load fonts
+    {{ 'http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' | stylesheet_tag }}
+    {{ 'http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' | stylesheet_tag }}
+
+    / Load jQuery library
+    {{ 'jquery-1.6.2.min' | javascript_tag }}
+    
+    / Load custom js
+    {{ 'panelslide' | javascript_tag }}
+    {{ 'custom' | javascript_tag }}
+
+    / Load topcontrol js
+    {{ 'scrolltopcontrol.js' | javascript_tag }}
+    
+    / Load NIVO Slider
+    {{ 'nivo-slider' |  stylesheet_tag }}
+    {{ 'nivo-theme' |  stylesheet_tag }}
+    {{ 'jquery.nivo.slider.pack' | javascript_tag }}
+    {{ 'nivo-options' | javascript_tag }}
+    
+    / Load quicksand
+    {{ 'jquery.quicksand' | javascript_tag }}
+
+    / Load fancybox
+    {{ 'jquery.fancybox-1.3.4.pack.js' | javascript_tag }}
+    {{ 'jquery.easing-1.3.pack.js' | javascript_tag }}
+    {{ 'jquery.mousewheel-3.0.4.pack.js' | javascript_tag }}
+    {{ 'jquery.fancybox-1.3.4' |  stylesheet_tag }}
+
+  %body
+    / This is the START of the header
+    #topcontrol{:style => "position: fixed; bottom: 5px; left: 960px; opacity: 1; cursor: pointer;", :title => "Go to Top"}
+    #header-wrapper
+      #header
+        #logo
+          %a{:href => "/"}
+            %img{:alt => "logo", :height => "80", :src => "{{ 'logo.png' | theme_image_url }}", :width => "100"}/
+        #header-text
+          {% include 'page_title' %}
+    / END of header
+    / This is the START of the menu
+    #menu-wrapper
+      #main-menu
+        %ul
+          %li
+            %a{:href => "/", :class => "{% if page.fullpath == 'index' %}selected{% endif %}"} Home {% if page.fullpath == 'index' %}→{% endif %}
+          {% for main_page in site.index.children %}
+          %li
+            %a{:href => "/{{ main_page.fullpath }}", :class => "{% if page.fullpath == main_page.fullpath %}selected{% endif %}"} {{ main_page.title }} {% if page.fullpath == main_page.fullpath %}→{% endif %}
+          {% endfor %}
+      / This is the START of the footer
+      #footer
+        #social-box
+          %ul
+            %li
+              .facebook
+                %a{:href => "#"}
+            %li
+              .twitter
+                %a{:href => "#"}
+            %li
+              .rss
+                %a{:href => "#"}
+        %h6 Copyright © 2011 - effe
+      / END of footer
+    / END of menu
+    / This is the START of the content
+    #content
+      {% block 'main' %}
+      / This is the START of the NIVO slider
+      .slider-wrapper.theme-effe
+        #slider.nivoSlider
+          %img{:alt => "", :src => "{{ 'slider/slide1.jpg' | theme_image_url }}", :title => "#img1"}/
+          %img{:alt => "", :src => "{{ 'slider/slide2.jpg' | theme_image_url }}", :title => "#img2"}/
+          %img{:alt => "", :src => "{{ 'slider/slide3.jpg' | theme_image_url }}", :title => "#img3"}/
+          %img{:alt => "", :src => "{{ 'slider/slide4.jpg' | theme_image_url }}", :title => "#img4"}/
+      / END of NIVO Slider
+      / This is the START of the recent posts
+      .spacer
+      {% block 'Recent' %}
+      #recent-text
+        %h2 {% editable_short_text 'Title' %}These are some of our latest posts...{% endeditable_short_text %}
+        .star-divider
+        %h5 {% editable_short_text 'Subtitle' %}You can check them out in our blog section!{% endeditable_short_text %}
+        .spacer
+      #recent-posts-container
+        .section-description
+          %h5 Recent posts
+          %p Here you can find some of our most recent and fresh content...
+        .recent-summary
+          {% for post in contents.posts limit: 2 %}
+          %div{class: "{% if forloop.last %}recent-item-last{% else %}recent-item{% endif %}"}
+            %a.single_image{:href => "{{ post.photo['url'] }}"}
+              %img{:alt => "recent1", :src => "{{ post.photo['url'] | theme_image_url | resize: '250x150#' }}"}/
+            %h6 {{ post.title }}
+            %p
+              {{ post.short_description }}
+              %a.readmore{:href => "/posts/{{ post._permalink }}"} read more →
+          {% endfor %}
+        / END of recent posts
+      {% endblock %}
+      {% endblock %}
+    / END of content
+    %p.slide
+      %a.btn-slide{:href => "#"}
+    #slide-panel
+      / This is the START of the follow section
+      #follow
+        %h3 Get Notified About My Newest Freebies & Upcoming Themes!
+        %h5
+        %p I do make some awesome freebies for you to use... All of them are FREE and pixel perfect!
+        %p Thanks for showing me the support by subscribing, and I'll try not to disappoint you...
+        %img.star-divider{:src => "{{ 'subscribe_divider.png' | theme_image_url }}"}/
+        %a{:href => "http://www.twitter.com/92_five"}
+        #follow-twitter
+          %img{:src => "{{ 'tweet_top.png' | theme_image_url }}"}/
+          %h4 Follow me on twitter
+        %a{:href => "http://eepurl.com/dqtGj"}
+        #follow-mail
+          %img{:src => "{{ 'mail_top.png' | theme_image_url }}"}/
+          %h4 Subscribe to my newsletter
+        %h1 Thanks for that!
+      / END of follow section

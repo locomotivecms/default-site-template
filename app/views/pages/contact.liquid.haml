@@ -1,0 +1,52 @@
+---
+title: Contact
+published: true
+position: 5
+editable_elements:
+  Title: Drop us a line, we don't bite!
+---
+{% extends index %}
+{% block 'main' %}
+#contact
+  %h5{:style => "margin-top:10px;"} Contact us
+  %p If you would like to contact us use this form, and we will get back to you shortly!
+  %form{:action => '{{contents.messages.public_submission_url}}', class: "form", id: "contactform", method: 'post'}
+    {% csrf_param %}
+    .boxes
+      %h6
+        name
+        %span.required *
+      .box
+        %input#sender_name.input{:name => "content[name]", :type => "text"}/
+      %h6
+        email
+        %span.required *
+      .box
+        %input#sender_email.input{:name => "content[email]", :type => "text"}/
+      %h6 message
+      .msgbox
+        %textarea#cf_message.message{:cols => "30", :name => "content[description]", :rows => "50"}
+      .submitbtn
+        %input.button.btncolor{:type => "submit", :value => "Send Message"}/
+#contactinfo
+  %h5 Our adress is:
+  %p Imaginary street 14
+  %p The windy City
+  %p 1345 Post code
+  %br/
+  %h5 Our contact info is:
+  %p E: info@effe.com
+  %p T: (012) 345 678
+  %p F: (456) 847 854
+  %br/
+  .dribbble
+    %a{:href => "#"} Dribbble
+  .forrst
+    %a{:href => "#"} mail@effe.com
+  .google
+    %a{:href => "#"} Google +
+  .twitter_small
+    %a{:href => "http://www.twitter.com"} Follow on twitter
+  .facebook_small
+    %a{:href => "http://www.facebook.com"} Follow on facebook
+{% endblock %}

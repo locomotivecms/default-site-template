@@ -1,0 +1,19 @@
+- "Sample 1":
+    photo: /samples/posts/blog1.jpg
+    short_description: "Et nihil laboriosam temporibus."
+    description: "<p>Culpa non unde nulla ut autem blanditiis quam impedit. Officia nihil repudiandae nobis sed aliquam architecto possimus sint. <br />Assumenda animi neque quibusdam quaerat dolores ipsum.</p>"
+
+- "Sample 2":
+    photo: /samples/posts/blog1.jpg # Path to a file in the public/samples folder or to a remote and external file.
+    short_description: "Autem in magnam velit."
+    description: "Culpa ipsum laudantium dolorum. Aliquid magni voluptas eos dolore. Tempora iusto fugiat sint omnis aut assumenda. Omnis aut vel ducimus dolorum et incidunt velit quo."
+
+- "Sample 3":
+    photo: /samples/posts/blog1.jpg # Path to a file in the public/samples folder or to a remote and external file.
+    short_description: "Voluptates enim enim molestiae error."
+    description: "Dicta ab repellendus et perspiciatis accusamus qui nemo est. Asperiores quaerat et voluptas. Eos ad consequatur consequatur. Iste velit quidem sed magnam."
+
+- "Sample 4":
+    photo: /samples/posts/blog1.jpg # Path to a file in the public/samples folder or to a remote and external file.
+    short_description: "Eius eveniet ad ut sit quas."
+    description: "Aut quia et magni dicta quisquam fugit recusandae. Culpa sed sequi ut doloremque suscipit. Maiores aliquam nihil suscipit et eligendi. Velit et explicabo et debitis excepturi consequuntur maxime."

@@ -1,1 +1,4 @@
 /config/deploy.yml
+/log/wagon.log
+.DS_Store
+/.sass-cache/**
