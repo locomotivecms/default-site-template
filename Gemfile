@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 
 # ruby '1.9.3'
 
-gem 'activesupport', '3.2.12'
-gem 'locomotivecms_wagon', :git => "git@github.com:locomotivecms/wagon.git"
+gem 'locomotivecms_wagon'
 
 group :development do
   # Mac OS X
