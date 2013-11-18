@@ -10,13 +10,13 @@ editable_elements:
 / This is the START of the portfolio section
 .spacer
 #filter
-%img.star-divider{:src => "{{ 'subscribe_divider.png' | theme_image_url }}"}/
+%img.star-divider{:src => "{{ 'subscribe_divider.png' | theme_image_url }}"}/
 #container
   %ul#stage
     {% for project in contents.projects %}
     %li{"data-tags" => "{{ project.data_tags }}"}
       %a{:href => "/projects/{{ project._permalink }}"}
-        %img{:alt => "Illustration", :src => "{{ project.photo1['url'] | resize: '200x120#' }}"}/
+        %img{:alt => "Illustration", :src => "{{ project.photo1['url'] | resize: '200x120#' }}"}/
       %h6 {{ project.title }}
       %p
         {{ project.catcher }}

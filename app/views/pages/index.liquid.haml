@@ -13,11 +13,11 @@ editable_elements:
     %link{:href => "favicon.ico", :rel => "shortcut icon"}/
     
     / Load CSS
-    {{ 'styles' | stylesheet_tag }}
+    {{ 'styles' | stylesheet_tag }}
 
     / Load fonts
-    {{ 'http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' | stylesheet_tag }}
-    {{ 'http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' | stylesheet_tag }}
+    {{ 'http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' | stylesheet_tag }}
+    {{ 'http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' | stylesheet_tag }}
 
     / Load jQuery library
     {{ 'jquery-1.6.2.min' | javascript_tag }}
@@ -36,7 +36,7 @@ editable_elements:
     {{ 'nivo-options' | javascript_tag }}
     
     / Load quicksand
-    {{ 'jquery.quicksand' | javascript_tag }}
+    {{ 'jquery.quicksand' | javascript_tag }}
 
     / Load fancybox
     {{ 'jquery.fancybox-1.3.4.pack.js' | javascript_tag }}
@@ -51,7 +51,7 @@ editable_elements:
       #header
         #logo
           %a{:href => "/"}
-            %img{:alt => "logo", :height => "80", :src => "{{ 'logo.png' | theme_image_url }}", :width => "100"}/
+            %img{:alt => "logo", :height => "80", :src => "{{ 'logo.png' | theme_image_url }}", :width => "100"}/
         #header-text
           {% include 'page_title' %}
     / END of header
@@ -87,10 +87,10 @@ editable_elements:
       / This is the START of the NIVO slider
       .slider-wrapper.theme-effe
         #slider.nivoSlider
-          %img{:alt => "", :src => "{{ 'slider/slide1.jpg' | theme_image_url }}", :title => "#img1"}/
-          %img{:alt => "", :src => "{{ 'slider/slide2.jpg' | theme_image_url }}", :title => "#img2"}/
-          %img{:alt => "", :src => "{{ 'slider/slide3.jpg' | theme_image_url }}", :title => "#img3"}/
-          %img{:alt => "", :src => "{{ 'slider/slide4.jpg' | theme_image_url }}", :title => "#img4"}/
+          %img{:alt => "", :src => "{{ 'slider/slide1.jpg' | theme_image_url }}", :title => "#img1"}/
+          %img{:alt => "", :src => "{{ 'slider/slide2.jpg' | theme_image_url }}", :title => "#img2"}/
+          %img{:alt => "", :src => "{{ 'slider/slide3.jpg' | theme_image_url }}", :title => "#img3"}/
+          %img{:alt => "", :src => "{{ 'slider/slide4.jpg' | theme_image_url }}", :title => "#img4"}/
       / END of NIVO Slider
       / This is the START of the recent posts
       .spacer
@@ -107,8 +107,8 @@ editable_elements:
         .recent-summary
           {% for post in contents.posts limit: 2 %}
           %div{class: "{% if forloop.last %}recent-item-last{% else %}recent-item{% endif %}"}
-            %a.single_image{:href => "{{ post.photo['url'] }}"}
-              %img{:alt => "recent1", :src => "{{ post.photo['url'] | theme_image_url | resize: '250x150#' }}"}/
+            %a.single_image{:href => "{{ post.photo.url }}"}
+              %img{:alt => "recent1", :src => "{{ post.photo.url | resize: '250x150#' }}"}/
             %h6 {{ post.title }}
             %p
               {{ post.short_description }}
@@ -127,14 +127,14 @@ editable_elements:
         %h5
         %p I do make some awesome freebies for you to use... All of them are FREE and pixel perfect!
         %p Thanks for showing me the support by subscribing, and I'll try not to disappoint you...
-        %img.star-divider{:src => "{{ 'subscribe_divider.png' | theme_image_url }}"}/
-        %a{:href => "http://www.twitter.com/92_five"}
+        %img.star-divider{:src => "{{ 'subscribe_divider.png' | theme_image_url }}"}/
+        %a{:href => "http://www.twitter.com/92_five"}/
         #follow-twitter
-          %img{:src => "{{ 'tweet_top.png' | theme_image_url }}"}/
+          %img{:src => "{{ 'tweet_top.png' | theme_image_url }}"}/
           %h4 Follow me on twitter
         %a{:href => "http://eepurl.com/dqtGj"}
         #follow-mail
-          %img{:src => "{{ 'mail_top.png' | theme_image_url }}"}/
+          %img{:src => "{{ 'mail_top.png' | theme_image_url }}"}/
           %h4 Subscribe to my newsletter
         %h1 Thanks for that!
       / END of follow section

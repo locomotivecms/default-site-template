@@ -2,3 +2,4 @@
 /log/wagon.log
 .DS_Store
 /.sass-cache/**
+public/tmp
