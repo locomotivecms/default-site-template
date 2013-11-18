@@ -2,16 +2,16 @@
 title: Home page
 published: true
 editable_elements:
-  Title: We make a bunch of cool stuff, have a look around!
+  Title: "We make a bunch of cool stuff, have a look around!"
 ---
-<!doctype html>
+!!!
 %html
   %head
-    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
-    %meta{:name => "description", :value => "{{ site.meta_description }}"}/
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    %meta{:name => "description", :value => "{{ site.meta_description }}"}
     %title {{ site.name }}
     %link{:href => "favicon.ico", :rel => "shortcut icon"}/
-    
+
     / Load CSS
     {{ 'styles' | stylesheet_tag }}
 
@@ -21,20 +21,20 @@ editable_elements:
 
     / Load jQuery library
     {{ 'jquery-1.6.2.min' | javascript_tag }}
-    
+
     / Load custom js
     {{ 'panelslide' | javascript_tag }}
     {{ 'custom' | javascript_tag }}
 
     / Load topcontrol js
     {{ 'scrolltopcontrol.js' | javascript_tag }}
-    
+
     / Load NIVO Slider
-    {{ 'nivo-slider' |  stylesheet_tag }}
-    {{ 'nivo-theme' |  stylesheet_tag }}
+    {{ 'nivo-slider' | stylesheet_tag }}
+    {{ 'nivo-theme' | stylesheet_tag }}
     {{ 'jquery.nivo.slider.pack' | javascript_tag }}
     {{ 'nivo-options' | javascript_tag }}
-    
+
     / Load quicksand
     {{ 'jquery.quicksand' | javascript_tag }}
 
@@ -42,7 +42,7 @@ editable_elements:
     {{ 'jquery.fancybox-1.3.4.pack.js' | javascript_tag }}
     {{ 'jquery.easing-1.3.pack.js' | javascript_tag }}
     {{ 'jquery.mousewheel-3.0.4.pack.js' | javascript_tag }}
-    {{ 'jquery.fancybox-1.3.4' |  stylesheet_tag }}
+    {{ 'jquery.fancybox-1.3.4' | stylesheet_tag }}
 
   %body
     / This is the START of the header
